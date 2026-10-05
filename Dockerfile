@@ -13,7 +13,7 @@ RUN shards install --production --frozen
 COPY . .
 
 # Compila o binário otimizado para produção (--release ativa todas as otimizações do LLVM)
-RUN crystal build src/server.cr --release --no-debug -o /app/bin/server
+RUN crystal build src/server.cr --release --no-debug -o /app/server
 
 # -------------------------------------------------------------
 # Estágio 2: Runner (Imagem final ultraleve: ~25MB)
@@ -37,7 +37,7 @@ RUN adduser -D -u 1001 kemal && chown -R kemal:kemal /app
 USER kemal
 
 # Copia apenas o binário compilado e os arquivos públicos (imagens, favicons, robots, sitemap)
-COPY --from=builder /app/bin/server /app/server
+COPY --from=builder /app/server /app/server
 COPY --from=builder /app/public /app/public
 
 ENV KEMAL_ENV=production
