@@ -1,0 +1,20 @@
+<div class="w-full max-w-2xl mx-auto my-3 text-center" id="destinos">
+    <p class="text-xs font-semibold tracking-wider text-[#454444] uppercase mb-2.5">
+        Região de Atendimento:
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-2">
+        <% @destinations.each do |dest| %>
+            <span
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-neutral-200 text-neutral-800 shadow-sm hover:border-green-600 hover:text-green-700 hover:shadow transition-all cursor-default">
+                <svg class="w-3.5 h-3.5 text-green-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <%= dest.name %>
+            </span>
+            <% end %>
+    </div>
+</div>

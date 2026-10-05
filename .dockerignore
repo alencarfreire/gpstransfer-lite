@@ -1,0 +1,7 @@
+.git
+.gitignore
+.sentry.yml
+bin/
+lib/
+*.log
+.DS_Store

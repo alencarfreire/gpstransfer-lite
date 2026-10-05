@@ -1,0 +1,35 @@
+<div class="w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[100px] pb-4 sm:pb-6" id="contato">
+  <footer
+    class="bg-gradient-to-r from-black via-[#424242] to-black text-[#FAFAFA] py-4 sm:py-5 px-6 sm:px-10 rounded-[40px] shadow-xl border border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs">
+
+    <!-- Info & Contato -->
+    <div class="flex items-center gap-4 flex-wrap justify-center">
+      <span class="font-bold text-white tracking-wide">GPS Transfer</span>
+      <span class="hidden sm:inline text-neutral-400">•</span>
+      <span class="text-neutral-300">Tel: <strong class="text-white">
+          <%= @phone %>
+        </strong></span>
+      <span class="hidden sm:inline text-neutral-400">•</span>
+      <div>
+        <a href="https://www.instagram.com/gpstransfer/" target="_blank" rel="noopener noreferrer"
+          class="hover:text-green-400 transition-colors">
+          Instagram
+        </a>
+        <span class="text-neutral-400">•</span>
+        <a href="https://www.tripadvisor.com.br/Attraction_Review-g616327-d25427668-Reviews-GPS_Transfer-Arraial_d_Ajuda_Porto_Seguro_State_of_Bahia.html"
+          target="_blank" rel="noopener noreferrer" class="hover:text-green-400 transition-colors">
+          TripAdvisor
+        </a>
+      </div>
+    </div>
+
+    <!-- Direitos & Autor -->
+    <div class="text-neutral-400 text-center md:text-right">
+      <span>© 2026 GPS Transfer. Desenvolvido por <a href="https://github.com/alencarfreire" target="_blank"
+          class="text-white hover:text-green-400 font-semibold underline decoration-neutral-600 transition-colors">
+          <%= @developer_name %>
+        </a>.</span>
+    </div>
+
+  </footer>
+</div>

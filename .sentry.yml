@@ -1,0 +1,7 @@
+display_name: GPS Transfer
+info: false
+build: crystal build ./src/server.cr -o ./bin/server
+run: ./bin/server
+watch:
+  - ./src/**/*.cr
+  - ./src/**/*.ecr
