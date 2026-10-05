@@ -45,4 +45,4 @@ ENV PORT=3000
 
 EXPOSE 3000
 
-CMD ["/app/server", "-e", "production"]
+CMD ["/app/server"]
